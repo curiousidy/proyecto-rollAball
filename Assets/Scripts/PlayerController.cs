@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private int count;
     private float movementX;
     private float movementY;
+
+    public int sceneNumber;
 
     //salto
     public float Jumpv = 0.4f;
@@ -52,7 +55,13 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
         rb.AddForce(movement * speed);
 
+        
+    }
+
+    private void Update()
+    {
         //salto
+
         if (Input.GetKeyDown(KeyCode.Space) && m_isGrounded == true)
         {
             Jump();
@@ -70,6 +79,12 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             m_isGrounded = true;
+        }
+
+        //End Game
+        if (other.gameObject.CompareTag("EndGame") &&  (count >= 13))
+        {
+            SceneManager.LoadScene(sceneNumber);
         }
     }
 
