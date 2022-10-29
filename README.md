@@ -4,6 +4,8 @@
 - The first scene is the start menu of the game "Start Game".
   - In the second scene, the ball has to pick up all the cubes on the screen. Once all the cubes are collected, the message "You Win" will be displayed, but to go to another scene you must access the last platform, whose material is "Space".
 
+The game is hosted on the master branch.
+
 ## Getting Started 🚀
 
 In order to develop this game, the following steps have been taken:
