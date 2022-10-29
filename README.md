@@ -31,3 +31,5 @@ Aspects to take into account: so that visual studio detects the variables and ca
 * The menu scene that after pressing the button, allows you to start playing the game.
 * Added the texture of the floor of the game stage.
 * Add images in the menu scene and the last scene at the end of the game.
+
+## Attached is the link to google drive for downloading the video showing how the game works. -> https://drive.google.com/file/d/1jpAxMBq8jntAZm3SAX9Uqj6v9eam2kjc/view?usp=sharing
